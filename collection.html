@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sneatch.css">
+    <style>
+        .navigation-bar {
+            display: flex;
+            background-color: lightgray;
+            padding: 10px;
+            height: 40px;
+        }
+        .category {
+            margin: auto;
+            width: 200px;
+        }
+        .category nav ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        .category nav ul a {
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1em;
+        }
+        .category nav ul a:hover {
+            border-bottom: 1px solid black;
+        }
+        .search-bar {
+            width: 200px;
+            height: 30px;
+            background-color: rgba(128, 128, 128, 0.618);
+            display: flex;
+            border-radius: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 0.9em;
+            padding: 5px;
+            position: absolute;
+            right: 15px;
+        }
+        .search-bar:hover {
+            background-color: gray;
+        }
+        .search-bar #icon img {
+            width: 20px;
+            height: 20px;
+            margin-top: 5px;
+        }
+        .search-bar input {
+            border: none;
+            background: none;
+            width: 100%;
+            color: black;
+            outline: none;
+            font-size: 1em;
+            margin-left: 10px;
+        }
+        .sell-box {
+            display: flex;
+        }
+        .sidebar {
+            width: 300px;
+            padding-top: 20px;
+        }
+        .filter {
+            display: flex;
+            margin: auto;
+            width: 200px;
+            padding-bottom: 20px;
+        }
+        .filter h2 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1.6em;
+        }
+        .filter img {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+        }
+        .filter-container {
+            margin: auto;
+            width: 200px;
+        }
+        .filter-container .price, .size, .colour, .brand {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-top: 1px solid #ccc;
+        }
+        .filter-container h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2em;
+        }
+        .filter-container .price label {
+            display: flex;
+            margin-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .filter-container .size .size-box {
+            display: flex;
+            flex-wrap: wrap;
+            width: 200px;
+        }
+        .filter-container .size .size-box div {
+            display: flex;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 50px;
+            height: 30px;
+            margin-top: 10px;
+            margin-right: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .filter-container .size .size-box p {
+            font-family: "Helvetica Neue",Helvetica,Arial;
+            text-align: center;
+        }
+        .filter-container .size .size-box div:hover {
+            cursor: pointer;
+        }
+        .filter-container .colour .colour-box {
+            width: 200px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .filter-container .colour .colour-box div {
+            border: 1px solid #ccc;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        .filter-container .colour .colour-box div:hover {
+            cursor: pointer;
+        }
+        .filter-container .colour .colour-box #black {
+            background-color: black;
+        }
+        .filter-container .colour .colour-box #white {
+            background-color: white;
+        }
+        .filter-container .colour .colour-box #gray {
+            background-color: gray;
+        }
+        .filter-container .colour .colour-box #red {
+            background-color: red;
+        }
+        .filter-container .colour .colour-box #brown {
+            background-color: brown;
+        }
+        .filter-container .colour .colour-box #green {
+            background-color: green;
+        }
+        .filter-container .brand label {
+            display: flex;
+            margin-top: 10px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .main-sell-box {
+            width: 70%;
+            height: 100vh;
+            padding-top: 20px;
+            overflow-y: auto;
+        }
+        .main-sell-box h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.7em;
+        }
+        .main-sell-box #men .product-box, #women .product-box, #kids .product-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            height: 120vh;
+        }
+        .main-sell-box article {
+            width: 280px;
+            height: 300px;
+        }
+        .main-sell-box .product-details h4 {
+            color : black;
+        }
+        .main-sell-box .product-details {
+            font-family: "Helvetica Neue",Helvetica,Arial;
+            font-size: 1em;
+            color: gray;
+        }
+        .main-sell-box h4 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .image-product-one, .image-product-two, .image-product-three, .image-product-four, .image-product-five, .image-product-six {
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Men section images */
+        #men .image-product-one {
+            background-image: url("Images/Men/air-jordan-1-low-older-shoes-ZXNwJq.png.jpeg");
+        }
+        #men .image-product-one:hover {
+            background-image: url("Images/Men/air-jordan-1-low-older-shoes-ZXNwJq.png-2.jpeg");
+        }
+        #men .image-product-two {
+            background-image: url("images/Men/air-jordan-1-mid-shoes-2Sd8TJ.png.jpeg");
+        }
+        #men .image-product-two:hover {
+            background-image: url("Images/Men/air-jordan-1-mid-shoes-2Sd8TJ.png-2.jpeg");
+        }
+        #men .image-product-three {
+            background-image: url("images/Men/air-max-90-shoes-zFhXBK.png.jpeg");
+        }
+        #men .image-product-three:hover {
+            background-image: url("Images/Men/air-max-90-shoes-zFhXBK.png-2.jpeg");
+        }
+        #men .image-product-four {
+            background-image: url("images/Men/air-max-plus-iii-shoes-WV2bDM.png.jpeg");
+        }
+        #men .image-product-four:hover {
+            background-image: url("Images/Men/air-max-plus-iii-shoes-WV2bDM.png-2.jpeg");
+        }
+        #men .image-product-five {
+            background-image: url("images/Men/go-flyease-easy-on-off-shoes-4bM44t.png.jpeg");
+        }
+        #men .image-product-five:hover {
+            background-image: url("Images/Men/go-flyease-easy-on-off-shoes-4bM44t.png-2.jpeg");
+        }
+        #men .image-product-six {
+            background-image: url("images/Men/bb650rvp_nb_02_i.webp");
+        }
+        #men .image-product-six:hover {
+            background-image: url("Images/Men/bb650rvp_nb_04_i-2.webp");
+        }
+
+        /* Women section images */
+        #women .image-product-one {
+            background-image: url("Images/women/VN0A3D29_OIU_HERO.jpeg");
+        }
+        #women .image-product-one:hover {
+            background-image: url("Images/women/VN0A3D29_OIU_ALT1.jpeg");
+        }
+        #women .image-product-two {
+            background-image: url("Images/women/VN000BWB_BQL_HERO.jpeg");
+        }
+        #women .image-product-two:hover {
+            background-image: url("Images/women/VN000BWB_BQL_ALT4.jpeg");
+        }
+        #women .image-product-three {
+            background-image: url("Images/women/air-force-1-07-shoe-Dz225W.png.jpeg");
+        }
+        #women .image-product-three:hover {
+            background-image: url("Images/women/air-force-1-07-shoe-Dz225W.png-2.jpeg");
+        }
+        #women .image-product-four {
+            background-image: url("Images/women/wl574zfn_nb_03_i.webp");
+        }
+        #women .image-product-four:hover {
+            background-image: url("Images/women/wl574zfn_nb_07_i.webp");
+        }
+        #women .image-product-five {
+            background-image: url("Images/women/wevovlg_nb_03_i.webp");
+        }
+        #women .image-product-five:hover {
+            background-image: url("Images/women/wevovlg_nb_05_i.webp");
+        }
+        #women .image-product-six {
+            background-image: url("Images/women/blazer-mid-77-shoes-GpF2lM.png.jpeg");
+        }
+        #women .image-product-six:hover {
+            background-image: url("Images/women/blazer-mid-77-shoes-GpF2lM.png-2.jpeg");
+        }
+
+        /* Kids section images */
+        #kids .image-product-one {
+            background-image: url("Images/kids/air-max-270-younger-shoes-z5tFQd.png.jpeg");
+        }
+        #kids .image-product-one:hover {
+            background-image: url("Images/kids/air-max-270-younger-shoes-z5tFQd.png-2.jpeg");
+        }
+        #kids .image-product-two {
+            background-image: url("Images/kids/gc574hgb_nb_03_i.webp");
+        }
+        #kids .image-product-two:hover {
+            background-image: url("Images/kids/gc574hgb_nb_05_i.webp");
+        }
+        #kids .image-product-three {
+            background-image: url("Images/kids/jordan-1-mid-se-younger-shoes-7Xb5JX.png.jpeg");
+        }
+        #kids .image-product-three:hover {
+            background-image: url("Images/kids/jordan-1-mid-se-younger-shoes-7Xb5JX.png-2.jpeg");
+        }
+        #kids .image-product-four {
+            background-image: url("Images/kids/yk570lw3_nb_03_i.webp");
+        }
+        #kids .image-product-four:hover {
+            background-image: url("Images/kids/yk570lw3_nb_05_i.webp");
+        }
+    </style> 
+    <title>Sneatch/Collection</title>
+</head>
+<body>
+    <header>
+        <div class="header-home">
+            <div class="header-logo-space">
+                <div class="header-logo">
+                    <a href="Home.html"><img src="Images/dot-arrow.png" alt=""></a>
+                </div>
+                <a href="Home.html"><h1>Sneatch</h1></a>
+            </div>
+            <div class="header-list">
+                <nav>
+                    <ul>
+                        <div class="header-list-text">
+                            <li><a href="Home.html">HOME</a></li>
+                            <li><a href="collection.html"><span>COLLECTION</span></a></li>
+                            <li><a href="Contact.html">CONTACT US</a></li>
+                        </div>
+                        <div class="header-list-icon">
+                            <li><a href="Shop.html"><img src="Images/bag.png" alt=""></a></li>
+                            <li><a href="Account.html"><img src="Images/user.png" alt=""></a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="collection-main">
+            <section class="navigation-bar">
+                <div class="category">
+                    <nav>
+                        <ul>
+                            <li><a href="#men">Men</a></li>
+                            <li><a href="#women">Women</a></li>
+                            <li><a href="#kids">Kids</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="search-bar">
+                    <div id="icon">
+                        <img src="Images/search.png" alt="">
+                    </div>
+                    <input type="text" placeholder="Search" required>
+                </div>
+            </section>
+            <div class="sell-box">
+                <div class="sidebar">
+                    <div class="filter">
+                        <h2>Filters</h2>
+                        <img src="Images/filter.png" alt="">
+                    </div>
+                    <section class="filter-container">
+                        <article class="price">
+                            <h3>Shop By Price</h3>
+                            <label>
+                                <input type="radio" name="price" value="Price">
+                                <span class="custom"></span>
+                                Under R 789.95
+                            </label>
+                            <label>
+                                <input type="radio" name="price" value="Price">
+                                <span class="custom"></span>
+                                R 789.95 - R 1299.95
+                            </label>
+                            <label>
+                                <input type="radio" name="price" value="Price">
+                                <span class="custom"></span>
+                                Over R 1 799.95
+                            </label>
+                        </article>
+                        <article class="size">
+                            <h3>Size</h3>
+                            <div class="size-box">
+                                <div><p>6</p></div><div><p>7</p></div><div><p>8</p></div><div><p>8.5</p></div><div><p>9</p></div>
+                                <div><p>9.5</p></div><div><p>10</p></div><div><p>10.5</p></div><div><p>11</p></div><div><p>11.5</p></div><div><p>12</p></div><div><p>12.5</p></div>
+                            </div>
+                        </article>
+                        <article class="colour">
+                            <h3>Colour</h3>
+                            <div class="colour-box">
+                                <div id="black"></div><div id="white"></div><div id="gray"></div><div id="red"></div>
+                            </div>
+                        </article>
+                        <article class="brand">
+                            <h3>Brand</h3>
+                            <label>
+                                <input type="checkbox" name="brand">
+                                <span class="custom"></span>
+                                Nike
+                            </label>
+                            <label>
+                                <input type="checkbox" name="brand">
+                                <span class="custom"></span>
+                                New Balance
+                            </label>
+                            <label>
+                                <input type="checkbox" name="brand">
+                                <span class="custom"></span>
+                                Vans
+                            </label>
+                        </article>
+                    </section>
+                </div>
+                <div class="main-sell-box">
+                    <section id="men">
+                        <h2>Men</h2>
+                        <div class="product-box">
+                            <article>
+                                <a href="Shop.html"><div class="image-product-one"></div></a>
+                                <div class="product-details">
+                                    <h4>Air Jordan 1 Low Older</h4>
+                                    <p>R 2 798</p>
+                                </div>
+                            </article>
+                            <article>
+                                <a href="Shop.html"><div class="image-product-two"></div></a>
+                                <div class="product-details">
+                                    <h4>Air Jordan 1 Mid</h4>
+                                    <p>R 3 230</p>
+                                </div>
+                            </article>
+                            <article>
+                                <a href="Shop.html"><div class="image-product-three"></div></a>
+                                <div class="product-details">
+                                    <h4>Air Max 90</h4>
+                                    <p>R 2 499</p>
+                                </div>
+                            </article>
+                            <article>
+                                <a href="Shop.html"><div class="image-product-four"></div></a>
+                                <div class="product-details">
+                                    <h4>Air Max Plus Ill</h4>
+                                    <p>R 2 759</p>
+                                </div>
+                            </article>
+                            <article>
+                                <a href="Shop.html"><div class="image-product-five"></div></a>
+                                <div class="product-details">
+                                    <h4>Go Flyease Easy</h4>
+                                    <p>R 3 795</p>
+                                </div>
+                            </article>
+                            <article>
+                                <a href="Shop.html"><div class="image-product-six"></div></a>
+                                <div class="product-details">
+                                    <h4>650</h4>
+                                    <p>R 2 599</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <section id="women">
+                        <h2>Women</h2>
+                        <div class="product-box">
+                            <article>
+                                <a href="Shop.html"><div class="image-product-one"></div></a>
+                                <div class="product-details">
+                                    <h4>Old School V Suede Canvas</h4>
+                                    <p>R 840</p>
+                                </div>
+                            </article>
+                            <article>
+                                <a href="Shop.html"><div class="image-product-two"></div></a>
+                                <div class="product-details">
+                                    <h4>Lowland ComfyCush Leather</h4>
+                                    <p>R 999</p>
+                                </div>
+                            </article>
+                            <article>
+                                <a href="Shop.html"><div class="image-product-three"></div></a>
+                                <div class="product-details">
+                                    <h4>Air Jordan Force 1</h4>
+                                    <p>R 2 785</p>
+                                </div>
+                            </article>
+                            <article>
+                                <a href="Shop.html"><div class="image-product-four"></div></a>
+                                <div class="product-details">
+                                    <h4>574</h4>
+                                    <p>R 2 345</p>
+                                </div>
+                            </article>
+                            <article>
+                                <a href="Shop.html"><div class="image-product-five"></div></a>
+                                <div class="product-details">
+                                    <h4>Wevolg</h4>
+                                    <p>R 1 569</p>
+                                </div>
+                            </article>
+                            <article>
+                                <a href="Shop.html"><div class="image-product-six"></div></a>
+                                <div class="product-details">
+                                    <h4>Blazer Mid</h4>
+                                    <p>R 2 999</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <section id="kids">
+                        <h2>Kids</h2>
+                        <div class="product-box">
+                            <article>
+                                <a href="Shop.html"><div class="image-product-one"></div></a>
+                                <div class="product-details">
+                                    <h4>Air Max 270</h4>
+                                    <p>R 1 235</p>
+                                </div>
+                            </article>
+                            <article>
+                                <a href="Shop.html"><div class="image-product-two"></div></a>
+                                <div class="product-details">
+                                    <h4>574</h4>
+                                    <p>R 1 599</p>
+                                </div>
+                            </article>
+                            <article>
+                                <a href="Shop.html"><div class="image-product-three"></div></a>
+                                <div class="product-details">
+                                    <h4>Jordan 1 Mid</h4>
+                                    <p>R 1 999</p>
+                                </div>
+                            </article>
+                            <article>
+                                <a href="Shop.html"><div class="image-product-four"></div></a>
+                                <div class="product-details">
+                                    <h4>570</h4>
+                                    <p>R 1 099</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-box">
+            <section class="footer-logo">
+                <a href="Home.html">
+                    <img src="Images/dot-arrow-3.png" alt="">
+                    <h1>Sneatch</h1>
+                </a>
+            </section>
+            <section class="footer-info">
+                <h3>Info</h3>
+                <div class="footer-info-contain">
+                    <nav>
+                        <ul>
+                            <li><a href="Contact.html">Contact us</a></li>
+                            <li><a href="Account.html">Account</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            <section class="footer-social">
+                <div class="footer-app">
+                    <ul>
+                        <li><a href="%"><img src="Images/facebook.png" alt=""></a></li>
+                        <li><a href="%"><img src="Images/twitter.png" alt=""></a></li>
+                        <li><a href="%"><img src="Images/instagram.png" alt=""></a></li>
+                        <li><a href="%"><img src="Images/youtube.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="footer-copyright">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores cum veniam tempore 
+                        quaerat iure ipsam optio officiis praesentium.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>

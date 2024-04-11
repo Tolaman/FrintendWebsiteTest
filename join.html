@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sneatch.css">
+    <style>
+        main {
+            text-align: center;
+            margin: auto;
+        }
+        main h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 3em;
+            margin-top: 50px;
+        }
+        main h2 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1.5em;
+        }
+        form {
+            margin: auto;
+            width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        input {
+            display: inline-block;
+            border: 1px solid #ccc;
+            outline: none;
+            color: black;
+            font-size: 0.8em;
+            font-family: "Helvetica Neue",Helvetica,Arial;
+            width: 300px;
+            height: 40px;
+            border-radius: 4px;
+            padding: 3px;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+        input:hover {
+            border: 1px solid black;
+        }
+        button {
+            width: 315px;
+            height: 45px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 1em;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Sneatch/Account</title>
+</head>
+<body>
+    <header>
+        <div class="header-home">
+            <div class="header-logo-space">
+                <div class="header-logo">
+                    <a href="Home.html"><img src="Images/dot-arrow.png" alt=""></a>
+                </div>
+                <a href="Home.html"><h1>Sneatch</h1></a>
+            </div>
+            <div class="header-list">
+                <nav>
+                    <ul>
+                        <div class="header-list-text">
+                            <li><a href="Home.html">HOME</a></li>
+                            <li><a href="collection.html">COLLECTION</a></li>
+                            <li><a href="Contact.html">CONTACT US</a></li>
+                        </div>
+                        <div class="header-list-icon">
+                            <li><a href="Shop.html"><img src="Images/bag.png" alt=""></a></li>
+                            <li><a href="Account.html"><img src="Images/user.png" alt=""></a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>Sneatch</h1>
+        <h2>Welcome!</h2>
+        <form>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="email" placeholder="Email address">
+            <input type="password" placeholder="Password">
+            <button>LOGIN</button>
+        </form>
+    </main>
+</body>
+</html>

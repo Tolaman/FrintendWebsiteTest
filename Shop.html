@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sneatch.css">
+    <style>
+        main {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: auto;
+        }
+        main h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.5em;
+        }
+        .client-details {
+            width: 400px;
+        }
+        .oder-summary {
+            width: 600px;
+        }
+        .info-box {
+            width: 300px;
+        }
+        input {
+            display: block;
+            border: 1px solid #ccc;
+            outline: none;
+            color: black;
+            font-size: 0.8em;
+            font-family: "Helvetica Neue",Helvetica,Arial;
+            width: 300px;
+            height: 40px;
+            border-radius: 4px;
+            padding: 3px;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+        input[type="search"] {
+            width: 315px;
+            height: 45px;
+        }
+        input:hover {
+            border: 1px solid black;
+        }
+        .city-zip {
+            display: flex;
+            justify-content: space-between;
+            width: 315px;
+        }
+        .city-zip input {
+            width: 130px;
+        }
+        label{
+            display: flex;
+            margin-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 0.9em;
+            color: #ccc;
+            width: 315px;
+        }
+        button {
+            width: 315px;
+            height: 45px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 1em;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        /* Item information */
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+        table h3 {
+            color: black;
+        }
+        td {
+            color: #ccc;
+            font-family: "Helvetica Neue",Helvetica,Arial;
+            font-size: 1em;
+        }
+        td input {
+            border: none;
+            width: 50px;
+            height: 10px;
+            margin-top: px;
+        }
+        td input:hover {
+            border: none;
+        }
+        #default-img {
+            background-image: url("Images/Fire\ Spirit\ Calcifer\ -\ Vinyl\ Decal\ Sticker\ for\ Wall\,\ Car\,\ Bike\,\ iPhone\,\ iPad\,\ Macbook\,\ Laptop\,\ Helmet.jpg");
+            width: 150px;
+            height: 150px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 1px solid #ccc;
+            margin-right: 50px;
+        }
+        #default-img:hover {
+            cursor: pointer;
+        }
+    </style>
+    <title>Sneatch/Shop</title>
+</head>
+<body>
+    <header>
+        <div class="header-home">
+            <div class="header-logo-space">
+                <div class="header-logo">
+                    <a href="Home.html"><img src="Images/dot-arrow.png" alt=""></a>
+                </div>
+                <a href="Home.html"><h1>Sneatch</h1></a>
+            </div>
+            <div class="header-list">
+                <nav>
+                    <ul>
+                        <div class="header-list-text">
+                            <li><a href="Home.html">HOME</a></li>
+                            <li><a href="collection.html">COLLECTION</a></li>
+                            <li><a href="Contact.html">CONTACT US</a></li>
+                        </div>
+                        <div class="header-list-icon">
+                            <li><a href="Shop.html"><img src="Images/bag.png" alt=""></a></li>
+                            <li><a href="Account.html"><img src="Images/user.png" alt=""></a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="client-details">
+            <h2>ENTER YOUR INFORMATION</h2>
+            <div class="info-box">
+                <input type="text" class="input" placeholder="First Name" required>
+                <input type="text" class="input" placeholder="Last Name" required>
+                <input type="email" class="input" placeholder="Email" required>
+                <input type="search" class="input" placeholder="Country" value="South Africa" required>
+                <input type="text" class="input" placeholder="Address Line" required>
+                <div class="city-zip">
+                    <input type="text" class="input" placeholder="City" value="Cape Town" required>
+                    <input type="number" class="input" placeholder="Zip / Postcode" required>
+                </div>
+                <input type="tel" class="input" placeholder="Mobile Phone" value="+27 " required>
+                <label>
+                    <input type="checkbox" class="input">
+                    <span class="custom"></span>
+                    <p>I have read and consent to Sneatch Privacy Statement and Cookie Policy.</p>
+                </label>
+                <a href="#" onclick="showAlert()">
+                    <button>Continue</button>
+                </a>
+                <script>
+                    function showAlert() {
+                        alert("The order has been placed");
+                    }
+                </script>
+            </div>
+        </section>
+        <section class="oder-summary">
+            <div class="oder-box">
+                <h2>ODER SUMMARY</h2>
+                <table>
+                    <tr>
+                        <td>Price</td>
+                        <td>Delivery/Shipping</td>
+                        <td>Quantity</td>
+                        <td><h3>Total</h3></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>R 0.00</td>
+                        <td>Free</td>
+                        <td><input type="number" value="0" /></td>
+                        <td><h3>R 0.00</h3></td>
+                    </tr>
+                    <tr>
+                        <td id="default-img"></td>
+                        <td>
+                            <h3>Item name</h3>
+                            <ul>
+                                <li>COLOR **</li>
+                                <li>SIZE **</li>
+                                <li>WIDTH **</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>

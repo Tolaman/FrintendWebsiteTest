@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="sneatch.css">
+        <style>
+            /* Header video */
+            header {
+                width: 100%;
+                height: 100vh;
+                background-image: linear-gradient(to top, rgb(0, 0, 0), transparent); 
+            }
+            #video-background {
+                position: absolute;
+                z-index: -1;
+                height: 100%;
+                bottom: 0;
+                right: 0;
+            }
+            @media (min-aspect-ratio:16/9) {
+                #video-background {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            @media (max-aspect-ratio:16/9) {
+                #video-background {
+                    width: auto;
+                    height: 100%;
+                }
+            }
+            .header-video-content {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+            .header-slide-section-text {
+                width: 100%;
+                height: 100%;
+                margin: auto;
+                text-align: center;
+                padding-top: 15%;
+            }
+            .header-slide-section-text h5 {
+                color: white;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 1.5em;
+            }
+            .header-slide-section-text h2 {
+                color: white;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 5em;
+            }
+            .header-slide-section-text p {
+                color: white;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 0.8em;
+            }
+            .header-video-shop-button button {
+                border: 1px solid black;
+                border-radius: 0px;
+                background-color: white;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 1.4em;
+                width: 200px;
+                height: 50px;
+                margin-top: 20px;
+            }
+            .header-video-shop-button button:hover {
+                background-color: black;
+                color: white;
+                cursor: pointer;
+            }
+
+            .home-main {
+                background-color: black;
+            }
+            .home-main h2 {
+                color: white;
+                font-size: 2em;
+                font-family: 'Open Sans', sans-serif;
+                margin-bottom: 20px;
+            }
+            .home-articles-top-picks {
+                width: 90%;
+                margin: auto;
+                margin-bottom: 50px;
+            }
+            .top-picks {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            .top-picks article {
+                width: 300px;
+            }
+            .top-picks-background-one, .top-picks-background-two, .top-picks-background-three {
+                height: 350px;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .top-picks-background-one {
+                background-image: url("Images/Men/air-jordan-1-low-older-shoes-ZXNwJq.png-2.jpeg");
+            }
+            .top-picks-background-two {
+                background-image: url("images/men/air-max-90-shoes-zFhXBK.png.jpeg");
+            }
+            .top-picks-background-three {
+                background-image: url("images/Women/wevovlg_nb_05_i.webp");
+            }
+            .top-picks .details h5 {
+                color: white;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 1em;
+                margin-top: 10px;
+            }
+            .top-picks .details p {
+                color: gray;
+                font-family: "Helvetica Neue",Helvetica,Arial;
+                font-size: 1em;
+                margin-top: 10px;
+            }
+            .home-trending-now {
+                width: 90%;
+                height: 60vh;
+                margin: auto;
+            }
+            .home-trending-block {
+                background-image: url("Images/wp10465334-basketball-pc-wallpapers.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 100%;
+            }
+            .trending-text {
+                width: 80%;
+                margin: auto;
+                padding-top: 60px;
+            }
+            .trending-text h3 {
+                color: white;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 2em;
+            }
+            .trending-text p {
+                color: lightgray;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 0.7em;
+                width: 300px;
+                margin-top: 10px;
+            }
+            .trending-text a button {
+                border: 1px solid black;
+                border-radius: 0px;
+                background-color: white;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 1em;
+                width: 120px;
+                height: 30px;
+                margin-top: 20px;
+            }
+            .trending-text a button:hover {
+                cursor: pointer;
+            }
+        </style>
+        <title>Sneatch/Home</title>
+    </head>
+    <body>
+        <header>
+            <video autoplay muted loop playinline id="video-background">
+                <source src="Images/running-video-design.mp4" type="video/mp4">
+            </video>
+            <div class="header-home">
+                <div class="header-logo-space">
+                    <div class="header-logo">
+                        <a href="Home.html"><img src="Images/dot-arrow.png" alt=""></a>
+                    </div>
+                    <a href="Home.html"><h1>Sneatch</h1></a>
+                </div>
+                <div class="header-list">
+                    <nav>
+                        <ul>
+                            <div class="header-list-text">
+                                <li><a href="Home.html"><span>HOME</span></a></li>
+                                <li><a href="collection.html">COLLECTION</a></li>
+                                <li><a href="Contact.html">CONTACT US</a></li>
+                            </div>
+                            <div class="header-list-icon">
+                                <li><a href="Shop.html"><img src="Images/bag.png" alt=""></a></li>
+                                <li><a href="Account.html"><img src="Images/user.png" alt=""></a></li>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header-video-content">
+                <div class="header-slide-section-text">
+                    <h5>Specials Sneatch</5>
+                    <h2>Discover our Sport Collection</h2>
+                    <p>
+                        Show the world what the future of sport looks like in the 2023 Special Sneatch Sport Collections
+                    </p>
+                    <div class="header-video-shop-button">
+                        <a href="collection.html">
+                            <button>Go to collection</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="home-main">
+            <section class="home-articles-top-picks">
+                <h2>Top Picks</h2>
+                <div class="top-picks">
+                    <article>
+                        <a href="collection.html"><div class="top-picks-background-one"></div></a>
+                        <div class="details">
+                            <h5>Nike Ja Fly</h5>
+                            <p>R 2499</p>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="collection.html"><div class="top-picks-background-two"></div></a>
+                        <div class="details">
+                            <h5>Nike Air Max 90</h5>
+                            <p>R 1999</p>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="collection.html"><div class="top-picks-background-three"></div></a>
+                        <div class="details">
+                            <h5>Nike Vomero 10</h5>
+                            <p>R 3999</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="home-trending-now">
+                <h2>Trending Now</h2>
+                <article class="home-trending-block">
+                    <div class="trending-text">
+                        <h3>New Jordan Special</h3>
+                        <p>
+                            The new Special Jordan are made for all of the fan of Basketball to play like a Professional. 
+                        </p>
+                        <a href="collection.html">
+                            <button>Shop Now</button>
+                        </a>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-box">
+                <section class="footer-logo">
+                    <a href="Home.html">
+                        <img src="Images/dot-arrow-3.png" alt="">
+                        <h1>Sneatch</h1>
+                    </a>
+                </section>
+                <section class="footer-info">
+                    <h3>Info</h3>
+                    <div class="footer-info-contain">
+                        <nav>
+                            <ul>
+                                <li><a href="Contact.html">Contact us</a></li>
+                                <li><a href="Account.html">Account</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+                <section class="footer-social">
+                    <div class="footer-app">
+                        <ul>
+                            <li><a href="%"><img src="Images/facebook.png" alt=""></a></li>
+                            <li><a href="%"><img src="Images/twitter.png" alt=""></a></li>
+                            <li><a href="%"><img src="Images/instagram.png" alt=""></a></li>
+                            <li><a href="%"><img src="Images/youtube.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-copyright">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores cum veniam tempore 
+                            quaerat iure ipsam optio officiis praesentium.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </footer>
+    </body>
+</html>

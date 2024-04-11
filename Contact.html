@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sneatch.css">
+    <Style>
+        main {
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            width: 70%;
+            height: 80vh;
+        }
+        main section {
+            margin: auto;
+            width: 500px;
+        }
+        h2 {
+            font-family: 'Open Sans', sans-serif;
+        }
+        input, select, textarea {
+            border: 1px solid #ccc;
+            outline: none;
+            color: black;
+            font-size: 0.8em;
+            font-family: "Helvetica Neue",Helvetica,Arial;
+            width: 300px;
+            height: 40px;
+            border-radius: 4px;
+            padding: 3px;
+            padding-left: 10px;
+            margin-top: 20px;
+            appearance: none;
+        }
+        input:hover, select:hover, textarea:hover {
+            border: 1px solid black;
+        }
+        .request input {
+            border: none
+        }
+        .request {
+            display: flex;
+        }
+        select {
+            cursor: pointer;
+            width: 315px;
+            height: 45px
+        }
+        form p {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 0.9em;
+            color: #ccc;
+            margin-bottom: -15px;
+            margin-top: 20px;
+        }
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+        button {
+            display: block;
+            margin-top: 20px;
+            border: 1px solid black;
+            border-radius: 4px;
+            width: 100px;
+            height: 45px;
+            padding-left: none;
+            background-color: black;
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        /* Second section of the page */
+        .text-box {
+            text-align: center;
+        }
+        .text-box h2 {
+            font-size: 3em;
+            font-weight:  normal;
+            margin-bottom: 20px;
+        }
+        .text-box p span {
+            font-size: 1em;
+            font-weight: bold;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        .text-box p, .text li {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .text h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+        .text img {
+            width: 80px;
+            height: 80px;
+        }
+        .text li span {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    </Style>
+    <title>Sneatch/Contact</title>
+</head>
+<body>
+    <header>
+        <div class="header-home">
+            <div class="header-logo-space">
+                <div class="header-logo">
+                    <a href="Home.html"><img src="Images/dot-arrow.png" alt=""></a>
+                </div>
+                <a href="Home.html"><h1>Sneatch</h1></a>
+            </div>
+            <div class="header-list">
+                <nav>
+                    <ul>
+                        <div class="header-list-text">
+                            <li><a href="Home.html">HOME</a></li>
+                            <li><a href="collection.html">COLLECTION</a></li>
+                            <li><a href="Contact.html"><span>CONTACT US</span></a></li>
+                        </div>
+                        <div class="header-list-icon">
+                            <li><a href="Shop.html"><img src="Images/bag.png" alt=""></a></li>
+                            <li><a href="Account.html"><img src="Images/user.png" alt=""></a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Submit a request</h2>
+            <form>
+                <input type="text" name="contact" placeholder="Name">
+                <input type="email" name="contact" placeholder="Email">
+                <p>Answers to our most frequently asked questions</p>
+                <select placeholder="What can we help you with" >
+                    <ul>
+                        <option><a href="%">Dispatch & Delivery</a></option>
+                        <option><a href="%">Orders</a></option>
+                        <option><a href="%">Returns</a></option>
+                        <option><a href="%">Product info</a></option>
+                        <option><a href="%">Orporate</a></option>
+                    </ul>
+                </select>
+                <p>Give us a few details and we'll offer the best solution.</p>
+                <textarea name="contact"cols="30" rows="5" placeholder="Extra information"></textarea>
+                <button>Submit</button>
+            </form>
+        </section>
+        <section class="text-box">
+            <h2>Hello!</h2>
+            <p>
+                <span>Would you like to get information about our trainings?</span><br>
+                To begin, please answer a few short questions, and then a Sneatch Business Team member will give 
+                you a call to discuss the products, software, and services that are right for you.
+            </p>
+            <div class="text">
+                <h3>Contact Us</h3>
+                <img src="Images/maps-and-flags.png" alt="">
+                <ul>
+                    <li><span>Address</span></li>
+                    <li>Century Boulevard Shop U422 Canal Walk Shopping Centre</li>
+                    <li><span>Email</span></li>
+                    <li>Sneatch@busines.co.za</li>
+                    <li><span>Phone</span></li>
+                    <li>+27 84 132 3345</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-box">
+            <section class="footer-logo">
+                <a href="Home.html">
+                    <img src="Images/dot-arrow-3.png" alt="">
+                    <h1>Sneatch</h1>
+                </a>
+            </section>
+            <section class="footer-info">
+                <h3>Info</h3>
+                <div class="footer-info-contain">
+                    <nav>
+                        <ul>
+                            <li><a href="Contact.html">Contact us</a></li>
+                            <li><a href="Account.html">Account</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            <section class="footer-social">
+                <div class="footer-app">
+                    <ul>
+                        <li><a href="%"><img src="Images/facebook.png" alt=""></a></li>
+                        <li><a href="%"><img src="Images/twitter.png" alt=""></a></li>
+                        <li><a href="%"><img src="Images/instagram.png" alt=""></a></li>
+                        <li><a href="%"><img src="Images/youtube.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="footer-copyright">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores cum veniam tempore 
+                        quaerat iure ipsam optio officiis praesentium.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>
