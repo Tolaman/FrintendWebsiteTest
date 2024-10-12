@@ -1,3 +1,16 @@
-I would be really honered if even one person looks at my work. 
-This is just a very small frontend test. But I am open to any correction or suggestion.
-I am eager to learn from you. And thank you for checking up my modest work.
+# Sneatch E-Commerce Full Frontend
+
+## A fully non functional example
+
+The project is older than the date I published it. It was a assignment from school to make a e-commerce website using only HTML and CSS. So the website doesn't have any usable function, but show my design skill to make a user friendly and beautiful website.
+These are the none usable function of the website:
+
+* Long in
+* Sign up
+* A precise filter
+* chackout
+* Catalog
+* A loop video home page
+* A contact page
+
+## See the look of the Site
